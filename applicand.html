@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYUSH Startup Registration Portal</title>
+<link rel="stylesheet" href="aplicant.css">  
+</head>
+<body>
+    <!-- Header Section -->
+<header class="header-section">
+    <div class="header-container">
+        <img src="AYUSH-logo.png" alt="AYUSH Logo" class="header-logo">
+        <div class="header-content">
+            <h1>AYUSH STARTUP REGISTRATION PORTAL</h1>
+            <p>Empowering AYUSH startups to integrate into mainstream healthcare</p>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><img src="logo4.jpg" alt="Logo" class="navbar-logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="howtoapply.html">How to apply</a></li>
+            <li><a href="applicand.html">login</a></li>
+            <li><a href="#for-startups">For Startups</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+  <!-- Main Section for Login Selection -->
+  <main>
+    <section class="auth-selection">
+      <h2>Select Login Type</h2>
+      <button id="adminLoginBtn">Administrator Login</button>
+      <button id="applicantLoginBtn">Applicant Login</button>
+    </section>
+
+    <!-- Administrator Login Form -->
+    <section id="adminLoginSection" class="hidden">
+      <h2>Administrator Login</h2>
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="adminUsername">Username</label>
+          <input type="text" id="adminUsername" placeholder="Enter admin username" required>
+        </div>
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login as Admin">
+        </div>
+      </form>
+    </section>
+
+    <!-- Applicant Login Form -->
+    <section id="applicantLoginSection" class="hidden">
+      <h2>Applicant Login</h2>
+      <form id="applicantLoginForm">
+        <div class="form-group">
+          <label for="applicantUsername">Username</label>
+          <input type="text" id="applicantUsername" placeholder="Enter applicant username" required>
+        </div>
+        <div class="form-group">
+          <label for="applicantPassword">Password</label>
+          <input type="password" id="applicantPassword" placeholder="Enter applicant password" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login as Applicant">
+        </div>
+      </form>
+    </section>
+
+    <!-- Applicant Form Submission Page -->
+    <section id="applicantFormSection" class="hidden">
+      <h2>Submit Your Application</h2>
+      <form id="applicationForm">
+        <div class="form-group">
+          <label for="startupName">Startup Name</label>
+          <input type="text" id="startupName" placeholder="Enter startup name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="document">Upload Documents</label>
+          <input type="file" id="document" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit Application">
+        </div>
+      </form>
+    </section>
+
+    <!-- Admin Dashboard Page -->
+    <section id="adminDashboardSection" class="hidden">
+      <h2>Submitted Applications</h2>
+      <table id="applicationsTable">
+        <thead>
+          <tr>
+            <th>Startup Name</th>
+            <th>Email</th>
+            <th>Document</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamically populated with submitted applications -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+
+  <script src="aplicant.js"></script>
+</body>
+</html>

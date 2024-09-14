@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Registration Form</title>
+    <link rel="stylesheet" href="registar.css">
+</head>
+<body>
+     <!-- Header Section -->
+<header class="header-section">
+    <div class="header-container">
+        <img src="AYUSH-logo.png" alt="AYUSH Logo" class="header-logo">
+        <div class="header-content">
+            <h1>AYUSH STARTUP REGISTRATION PORTAL</h1>
+            <p>Empowering AYUSH startups to integrate into mainstream healthcare</p>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><img src="logo4.jpg" alt="Logo" class="navbar-logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="howtoapply.html">How to apply</a></li>
+            <li><a href="applicand.html">login</a></li>
+            <li><a href="registar.html">Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="form-container">
+        <h2>Startup Registration Form</h2>
+        <form id="registrationForm" enctype="multipart/form-data">
+            <!-- Personal Details Section -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" required>
+
+            <label for="motherName">Mother's Name:</label>
+            <input type="text" id="motherName" name="motherName" placeholder="Enter mother's name" required>
+
+            <label for="parentsMobile">Parents' Mobile Number:</label>
+            <input type="tel" id="parentsMobile" name="parentsMobile" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+
+            <label for="aadharNumber">Aadhar Number:</label>
+            <input type="text" id="aadharNumber" name="aadharNumber" placeholder="Enter Aadhar number" pattern="[0-9]{12}" required>
+
+            <label for="Aadhar">Upload Aadhar Card(100 kb):</label>
+            <input type="file" id="Aadharuplod" name="Aadhar" accept=".jpg,.jpeg,.png,.pdf" required>
+
+            <label for="panNumber">Pan Number:</label>
+            <input type="text" id="aadharNumber" name="aadharNumber" placeholder="Enter Aadhar number" pattern="[0-9]{12}" required>
+
+            <label for="panUpload">Upload pan Card(100 kb):</label>
+            <input type="file" id="panUpload" name="panUpload" accept=".jpg,.jpeg,.png,.pdf" required>
+
+            <label for="parentsMobile"> Mobile Number:</label>
+            <input type="tel" id="Mobile Number" name="Mobile Numbere" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+
+            <label for="Photo">Upload Photo(50 kb):</label>
+            <input type="file" id="Photo" name="Photo" accept=".jpg,.jpeg,.png,.pdf" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Startup Details -->
+            <label for="startupName">Startup Name:</label>
+            <input type="text" id="startupName" name="startupName" placeholder="Enter your startup name" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Create a username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <!-- CAPTCHA Simulation -->
+            <div class="captcha">
+                <label for="captcha">Enter the number: <span id="captcha-code"></span></label>
+                <input type="text" id="captcha" name="captcha" placeholder="Enter captcha" required>
+                <button type="button" onclick="generateCaptcha()">Refresh Captcha</button>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="registtar.js"></script>
+</body>
+</html>

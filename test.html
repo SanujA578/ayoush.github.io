@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYUSH Startup Registration Portal</title>
+<link rel="stylesheet" href="test.css">  
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>AYUSH Startup Registration Portal</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section for Login Selection -->
+  <main>
+    <section class="auth-selection">
+      <h2>Select Login Type</h2>
+      <button id="adminLoginBtn">Administrator Login</button>
+      <button id="applicantLoginBtn">Applicant Login</button>
+    </section>
+
+    <!-- Administrator Login Form -->
+    <section id="adminLoginSection" class="hidden">
+      <h2>Administrator Login</h2>
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="adminUsername">Username</label>
+          <input type="text" id="adminUsername" placeholder="Enter admin username" required>
+        </div>
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login as Admin">
+        </div>
+      </form>
+    </section>
+
+    <!-- Applicant Login Form -->
+    <section id="applicantLoginSection" class="hidden">
+      <h2>Applicant Login</h2>
+      <form id="applicantLoginForm">
+        <div class="form-group">
+          <label for="applicantUsername">Username</label>
+          <input type="text" id="applicantUsername" placeholder="Enter applicant username" required>
+        </div>
+        <div class="form-group">
+          <label for="applicantPassword">Password</label>
+          <input type="password" id="applicantPassword" placeholder="Enter applicant password" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login as Applicant">
+        </div>
+      </form>
+    </section>
+
+    <!-- Applicant Form Submission Page -->
+    <section id="applicantFormSection" class="hidden">
+      <h2>Submit Your Application</h2>
+      <form id="applicationForm">
+        <div class="form-group">
+          <label for="startupName">Startup Name</label>
+          <input type="text" id="startupName" placeholder="Enter startup name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="document">Upload Documents</label>
+          <input type="file" id="document" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit Application">
+        </div>
+      </form>
+    </section>
+
+    <!-- Admin Dashboard Page -->
+    <section id="adminDashboardSection" class="hidden">
+      <h2>Submitted Applications</h2>
+      <table id="applicationsTable">
+        <thead>
+          <tr>
+            <th>Startup Name</th>
+            <th>Email</th>
+            <th>Document</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamically populated with submitted applications -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 AYUSH Startup Registration Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="test.js"></script>
+</body>
+</html>
